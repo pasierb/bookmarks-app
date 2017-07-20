@@ -40,7 +40,7 @@ class BookmarksController < ApplicationController
   end
 
   def get_bookmark
-    @bookmark ||= Bookmark.where(id: params[:id]).first
+    @bookmark ||= Bookmark.find(params[:id])
   end
 
   def permitted_params
