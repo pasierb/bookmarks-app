@@ -1,24 +1,23 @@
-# README
+# Bookmarks app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+Each bookmark has a title, an url and a shortening. All 3 are provided by the user. Title and
+url are both required. Each bookmark belongs to a site. Site has a top level URL and it is
+created together with the bookmark if it’s not already there.
 
-* Ruby version
+For example if someone adds two bookmarks with urls: „http://reddit.com/cats” and
+„http://reddit.com/dogs” and there is no site with URL „http://reddit.com” it will be created
+when the first bookmark is added.
 
-* System dependencies
+The application should allow user to create, edit, list and search bookmarks.
 
-* Configuration
+Bonus points:
+  - add tags: each bookmark can have many tags
+  - make search feature that allows users to search bookmarks by any field or tag
 
-* Database creation
+## Tests
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ bundle exec rails test
+```

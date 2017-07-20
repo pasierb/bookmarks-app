@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720171153) do
+ActiveRecord::Schema.define(version: 20170720201311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170720171153) do
     t.integer "site_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "tags", default: [], array: true
     t.index ["short"], name: "index_bookmarks_on_short"
     t.index ["title"], name: "index_bookmarks_on_title"
     t.index ["url"], name: "index_bookmarks_on_url"

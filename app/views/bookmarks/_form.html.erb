@@ -18,6 +18,12 @@
     <%= f.text_field :short, class: 'form-control' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :tagline %>
+    <%= f.text_field :tagline, class: 'form-control' %>
+    <p class="help-block"><%=t :tagline_help, scope: 'pages.bookmarks' %></p>
+  </div>
+
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

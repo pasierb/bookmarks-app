@@ -36,7 +36,7 @@ class BookmarksController < ApplicationController
   private
 
   def get_bookmarks
-    @bookmarks ||= Bookmark.search(params[:search])
+    @bookmarks ||= Bookmark.search(params[:search]).includes(:site)
   end
 
   def get_bookmark
@@ -44,7 +44,7 @@ class BookmarksController < ApplicationController
   end
 
   def permitted_params
-    params.require(:bookmark).permit(:title, :url, :short)
+    params.require(:bookmark).permit(:title, :url, :short, :tagline)
   end
 
 end

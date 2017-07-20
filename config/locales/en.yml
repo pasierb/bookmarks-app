@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application_name: 'Bookmarks'
+  text:
+    search: 'Search'
+  pages:
+    bookmarks:
+      new: 'New Bookmark'
+      tagline_help: "Comma separated list of tags."
