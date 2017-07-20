@@ -35,5 +35,5 @@ en:
     search: 'Search'
   pages:
     bookmarks:
-      new: 'New Bookmark'
+      new: 'Add Bookmark'
       tagline_help: "Comma separated list of tags."
