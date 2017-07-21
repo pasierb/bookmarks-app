@@ -1,9 +1,9 @@
 class BookmarkService
 
   def self.create(attributes:)
-    site = get_site(attributes[:url])
-    bookmark = site.bookmarks.new(attributes)
-    bookmark.save if bookmark.valid?
+    bookmark = Bookmark.new(attributes)
+    bookmark.site = get_site(attributes[:url])
+    bookmark.save
 
     bookmark
   end
